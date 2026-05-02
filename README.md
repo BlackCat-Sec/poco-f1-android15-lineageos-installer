@@ -59,12 +59,35 @@ fastboot --version
 ## Files
 
 - `install-poco-f1-lineageos.ps1` - main guided installer.
+- `download-required-files.ps1` - optional downloader for official LineageOS files and Android Platform Tools.
 - `verify-device.ps1` - safe device check only; does not modify the phone.
 - `config.example.json` - example configuration.
 - `SAFETY.md` - safety rules.
 - `troubleshooting.md` - common fixes.
 - `android-studio-after-install.md` - Android Studio setup after LineageOS boots.
+- `DIRECT-DOWNLOADS.md` - explains why large binaries are downloaded from official sources instead of committed to git.
+- `NETHUNTER-NOTES.md` - notes about the NetHunter root environment and kernel compatibility.
+- `ADAPT-FOR-OTHER-PHONES.md` - guidance for safely adapting the project structure to other devices.
+- `INSTALL-LOG.md` - example install record from a completed Poco F1 setup.
 - `logs\.gitkeep` - keeps the logs folder in the project.
+
+## Download Required Files First
+
+The repository does not include ROM zips, recovery images, APKs, or patched boot images. Those files are large, device/build-specific, and should come from official sources.
+
+To download the latest official Poco F1 LineageOS zip and matching recovery image:
+
+```powershell
+.\download-required-files.ps1
+```
+
+To also download and extract Google's official Android Platform Tools:
+
+```powershell
+.\download-required-files.ps1 -DownloadPlatformTools
+```
+
+See `DIRECT-DOWNLOADS.md` for details.
 
 ## Recommended Run Order
 
@@ -150,4 +173,3 @@ The PC may show `adb sideload` stopping around 47%. That can be normal; trust th
 - Install guide: https://wiki.lineageos.org/devices/beryllium/install/
 - Downloads page: https://download.lineageos.org/devices/beryllium
 - Static build list: https://download-static.lineageos.org/beryllium
-
