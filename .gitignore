@@ -1,0 +1,27 @@
+# Local Android tooling and downloaded payloads
+platform-tools/
+platform-tools-*.zip
+downloads/
+
+# Runtime logs and screenshots
+logs/*
+!logs/.gitkeep
+
+# User-local configs
+config.json
+
+# Android packages, ROMs, recoveries, and images
+*.apk
+*.apks
+*.zip
+*.img
+*.tar
+*.tar.*
+*.7z
+*.xz
+
+# OS/editor noise
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/

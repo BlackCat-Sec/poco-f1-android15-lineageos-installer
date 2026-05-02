@@ -1,0 +1,9 @@
+{
+  "deviceCodename": "beryllium",
+  "lineageZip": "",
+  "recoveryImg": "",
+  "gappsZip": "",
+  "autoDownloadOfficialLineage": true,
+  "downloadsDir": ".\\downloads",
+  "logsDir": ".\\logs"
+}
